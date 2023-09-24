@@ -10,7 +10,7 @@ import {
 } from "@materials";
 import { GabbageBox } from "@materials/icons";
 import { statusTranslate } from "@/utils/translate";
-import { format } from "date-fns";
+import { format, isFuture } from "date-fns";
 
 export interface ResourceListAssignment {
   id: number;
@@ -103,6 +103,9 @@ const handlePopoverMenuOpen = (id: number) => {
 const handlePopoverMenuClose = () => {
   popoverMenuOpen.value = null;
 };
+const handleEdit = (serial: number) => {
+  navigateTo(`teachers/assignments/${serial}/edit`);
+};
 </script>
 <template>
   <div>
@@ -186,8 +189,9 @@ const handlePopoverMenuClose = () => {
         >
           <div class="other-operation-actions-container">
             <div
+              v-show="isFuture(render.item.deadline)"
               class="other-operation-action"
-              @click.stop="() => console.log(render.item.id)"
+              @click.stop="() => handleEdit(render.item.serial)"
             >
               編集する
             </div>
