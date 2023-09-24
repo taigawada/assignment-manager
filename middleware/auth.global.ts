@@ -23,9 +23,7 @@ export default defineNuxtRouteMiddleware(async () => {
       params.set("redirect", window.location.href);
       if (config.public.NODE_ENV === "production") {
         navigateTo(
-          `${
-            config.public.AUTH_SITE_BASE_URL
-          }/auth0/login?${params.toString()}`,
+          `${config.public.AUTH_SITE_BASE_URL}/auth/login?${params.toString()}`,
           {
             external: true,
           },
