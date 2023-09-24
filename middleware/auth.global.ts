@@ -21,7 +21,7 @@ export default defineNuxtRouteMiddleware(async () => {
     } catch (e) {
       const params = new URLSearchParams();
       params.set("redirect", window.location.href);
-      if (config.public.NODE_ENV === "production") {
+      if (config.public.VERCEL_ENV === "production") {
         navigateTo(
           `${config.public.AUTH_SITE_BASE_URL}/auth/login?${params.toString()}`,
           {
