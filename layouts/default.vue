@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+
 import Header from "./default/header.vue";
 import Nav from "./default/nav.vue";
 
@@ -18,10 +18,7 @@ const onClickOutside = () => {
 const onTransition = () => {
   sidebarOpen.value = false;
 };
-const handleLogout = async () => {
-  const provider = new GoogleAuthProvider();
-  await signInWithPopup(nuxt.$auth, provider);
-};
+const handleLogout = async () => {};
 </script>
 <template>
   <div class="container">
