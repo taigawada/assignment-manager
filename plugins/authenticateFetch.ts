@@ -16,10 +16,6 @@ type UseFetchParams = Parameters<typeof useFetch>;
 export default defineNuxtPlugin(() => {
   const nuxt = useNuxtApp();
   const config = useRuntimeConfig();
-  const loginInDevelopment = async () => {
-    const provider = new GoogleAuthProvider();
-    await signInWithPopup(nuxt.$auth, provider);
-  };
   return {
     provide: {
       async authenticatedFetch(

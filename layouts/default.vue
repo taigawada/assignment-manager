@@ -18,7 +18,12 @@ const onClickOutside = () => {
 const onTransition = () => {
   sidebarOpen.value = false;
 };
-const handleLogout = async () => {};
+const handleLogout = async () => {
+  navigateTo("https://taigawada.work", {
+    external: true,
+    open: { target: "_self" },
+  });
+};
 </script>
 <template>
   <div class="container">
