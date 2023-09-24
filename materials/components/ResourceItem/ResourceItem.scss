@@ -1,0 +1,16 @@
+.resource_item__child {
+    color: var(--text);
+    white-space: nowrap;
+    display: grid;
+    align-items: center;
+    grid-template-rows: var(--child-item-height);
+    grid-template-columns: var(--child-item-weights);
+    justify-self: var(--item-distribution);
+}
+.resource_item__base div {
+    font-size: var(--font-size-4);
+}
+.popup_menu_base {
+    display: inline-block;
+    height: 16px;
+}

@@ -1,0 +1,9 @@
+@use "./breakpoints.scss" as bp;
+@mixin mq($breakpoint) {
+  @media #{map-get(bp.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+@mixin clickable {
+  cursor: pointer;
+}

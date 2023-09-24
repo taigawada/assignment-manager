@@ -1,0 +1,69 @@
+.simple_calender___container {
+    position: relative;
+    width: 100%;
+    color: var(--text);
+    display: inline-block;
+    text-align: center;
+}
+.simple_calender___container_loading {
+    pointer-events: none;
+}
+.simple_calender__loading_spinner_base {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+.simple_calender__heading {
+    width: 100%;
+    display: inline-flex;
+    margin: var(--space-5) auto;
+    align-items: center;
+    justify-content: space-around;
+}
+.simple_calender__paginate_icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--surface-black);
+    cursor: pointer;
+}
+.simple_calender__table {
+    display: inline-table;
+    width: 100%;
+}
+.simple_calender__weekofday_header {
+    font-weight: 100;
+    color: var(--text);
+    padding: var(--space-2 0);
+}
+.simple_calender__date_data {
+    position: relative;
+    font-size: var(--font-size-3);
+    color: var(--text);
+    padding: var(--space-2) 0;
+    border-radius: 5px;
+    cursor: var(--cursor-calender-data);
+}
+.calenderDataEntered {
+    background: var(--hovered);
+}
+.calenderShowDisable {
+    color: var(--text-disabled);
+    cursor: default;
+}
+.calenderDataSelected {
+    color: var(--surface);
+    background: var(--selected);
+}
+.simple_calender__holidays_icon {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(255, 10, 10, 1);
+}
+.simple_calender__holidays_icon_alpha {
+    opacity: 0.2;
+}

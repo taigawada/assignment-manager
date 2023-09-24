@@ -1,0 +1,93 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
+  output   = "scheme.md"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Teachers {
+  uid               String              @id
+  name              String
+  submittionMethods SubmittionMethods[]
+  assignments       Assignments[]
+  rooms             Rooms[]
+}
+
+model SubmittionMethods {
+  id         Int      @id @default(autoincrement())
+  index      Int
+  method     String
+  Teacher    Teachers @relation(fields: [teacherUid], references: [uid], onDelete: Cascade)
+  teacherUid String
+}
+
+model Submittions {
+  id           Int         @id @default(autoincrement())
+  submittedAt  DateTime?
+  student      Students    @relation(fields: [studentId], references: [id])
+  studentId    Int
+  assignment   Assignments @relation(fields: [assignmentId], references: [id])
+  assignmentId Int
+}
+
+model Students {
+  id          Int           @id @default(autoincrement())
+  name        String
+  syussekiNo  Int
+  room        Rooms         @relation(fields: [roomId], references: [id])
+  roomId      Int
+  Submittions Submittions[]
+}
+
+model Schools {
+  id    Int     @id @default(autoincrement())
+  name  String
+  Rooms Rooms[]
+}
+
+model Rooms {
+  id          Int           @id @default(autoincrement())
+  year        Int           @default(2023)
+  school      Schools       @relation(fields: [schoolId], references: [id])
+  name        String
+  students    Students[]
+  assignments Assignments[]
+  Teachers    Teachers[]
+
+  schoolId Int @default(1)
+
+  @@unique([year, schoolId, name])
+}
+
+model Assignments {
+  id               Int       @id @default(autoincrement())
+  serial           Int
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  status           String
+  releaseDate      DateTime?
+  assignedClasses  Rooms[]
+  title            String
+  description      String
+  deadline         DateTime
+  submittionMethod String
+  isRepeat         Boolean
+  submitOnHoliday  Boolean
+  cyclePeriod      Json
+
+  isDeleted Boolean @default(false)
+
+  Submittions Submittions[]
+
+  Teachers   Teachers? @relation(fields: [teacherUid], references: [uid])
+  teacherUid String
+
+  @@unique([serial, teacherUid])
+}

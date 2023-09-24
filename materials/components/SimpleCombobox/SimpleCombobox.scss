@@ -1,0 +1,49 @@
+.simple_combobox__float_box {
+    color: var(--text);
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    background: var(--surface);
+    margin-top: var(--space-1);
+    width: 100%;
+    height: var(--float-box-height);
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow-1);
+    overflow: scroll;
+    text-align: left;
+}
+.enteredItem {
+    background: var(--hovered);
+}
+.checkedItem {
+    background: var(--checked-alpha);
+}
+.currentSelect {
+    width: calc(100% - 3px);
+    border: 1px solid var(--checked);
+    border-radius: 5px;
+}
+.simple_combobox__item {
+    margin-left: var(--space-3);
+}
+.non_multi_selectable {
+    cursor: pointer;
+    text-align: left;
+    padding: var(--space-3) 0;
+}
+.simple_combobox__input_arrow_down {
+    width: 12px;
+    height: 12px;
+    fill: var(--surface-black);
+}
+.simple_combobox__add_newvalue {
+    padding-left: var(--space-4);
+    display: flex;
+    align-items: center;
+}
+.simple_combobox__add_newvalue:hover {
+    background: var(--hovered);
+}
+.simple_combobox__add_icon {
+    transform: rotate(45deg);
+}

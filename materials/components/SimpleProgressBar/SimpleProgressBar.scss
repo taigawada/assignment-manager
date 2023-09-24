@@ -1,0 +1,11 @@
+.simple_progressbar_base {
+    width: 100%;
+    height: 10px;
+    border-radius: 50vh;
+    background: var(--progress-bar-surface);
+    overflow: hidden;
+}
+.simple_progressbar__progress {
+    height: 100%;
+    background: var(--progress-bar-filler);
+}

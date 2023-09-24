@@ -1,0 +1,27 @@
+.simple_spinner__loader,
+.simple_spinner__loader:after {
+    color: #2c3e50;
+    border-radius: 50%;
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+}
+.simple_spinner__loader {
+    display: inline-block;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: var(--spinner-border-weight) solid var(--spinner-color-alpha);
+    border-right: var(--spinner-border-weight) solid var(--spinner-color-alpha);
+    border-bottom: var(--spinner-border-weight) solid var(--spinner-color-alpha);
+    border-left: var(--spinner-border-weight) solid var(--spinner-color);
+    transform: translateZ(0);
+    animation: SpinnerRotateAnim 0.7s infinite linear;
+}
+@keyframes SpinnerRotateAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

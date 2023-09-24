@@ -1,0 +1,12 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["*"],
+      "@materials/icons": ["./materials/icons.index.ts"],
+      "@materials": ["./materials/components.index.ts"]
+    }
+  }
+}

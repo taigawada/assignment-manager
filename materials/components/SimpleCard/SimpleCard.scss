@@ -1,0 +1,17 @@
+.simple_card__base {
+    color: var(--text);
+    display: inline-block;
+    box-sizing: border-box;
+    width: var(--card-width);
+    border-radius: var(--border-radius-2);
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: var(--box-shadow-1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.simple_card__actions {
+    margin: var(--space-2) var(--space-10) var(--space-10) var(--space-10);
+    display: flex;
+    justify-content: flex-end;
+}

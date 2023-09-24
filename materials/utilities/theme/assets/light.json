@@ -1,0 +1,67 @@
+{
+    "--global-background": "rgba(244, 248, 249, 1)",
+
+    "--theme-color": "rgba(255, 194, 85, 1)",
+    "--theme-color-alpha": "rgba(255, 194, 85, 0.2)",
+
+    "--surface": "rgba(253, 255, 255, 1)",
+    "--surface-black-alpha": "rgba(44, 62, 80, 0.1)",
+    "--surface-black": "rgba(44, 62, 80, 1)",
+    "--surface-warning": "rgba(255, 194, 85, 1)",
+    "--surface-warning-alpha": "rgba(255, 194, 85, 0.2)",
+    "--surface-warning-deep": "rgba(196, 113, 67, 1)",
+    "--surface-error": "rgba(255, 121, 121, 1)",
+    "--surface-error-alpha": "rgba(255, 240, 240, 1)",
+
+    "--text": "rgba(44, 62, 80, 1)",
+    "--text-weak": "rgba(114, 114, 114, 1)",
+    "--text-white": "rgba(255, 255, 255, 1)",
+    "--text-black": "rgba(44, 62, 80, 1)",
+    "--text-disabled": "rgba(200, 200, 200, 1)",
+    "--text-error": "rgba(196, 0, 0, 1)",
+
+    "--primary": "rgba(255, 194, 85, 1)",
+    "--primary-hovered": "rgba(255, 178, 54, 1)",
+    "--primary-pressed": "rgba(255, 178, 54, 1)",
+    "--primary-disabled": "rgba(255, 194, 85, 0.5)",
+    "--primary-text": "rgba(245, 245, 245, 1)",
+    "--normal": "rgba(244, 248, 249, 1)",
+    "--normal-hovered": "rgba(233, 239, 241, 1)",
+    "--normal-pressed": "rgba(233, 239, 241, 1)",
+    "--normal-disabled": "rgba(114, 114, 114, 0.1)",
+    "--normal-text": "rgba(44, 62, 80, 1)",
+    "--critical": "rgba(255, 121, 121, 1)",
+    "--critical-hovered": "rgba(255, 95, 95, 1)",
+    "--critical-pressed": "rgba(255, 95, 95, 1)",
+    "--critical-disabled": "rgb(255, 146, 146)",
+    "--critical-text": "rgba(245, 245, 245, 1)",
+    "--plain": "rgba(53, 146, 185, 1)",
+    "--plain-hovered": "rgba(35, 98, 124, 1)",
+    "--plain-pressed": "rgba(35, 98, 124, 1)",
+    "--plain-disabled": "rgba(161, 161, 161, 1)",
+    "--critical-plain": "rgba(255, 121, 121, 1)",
+    "--critical-plain-hovered": "rgba(255, 95, 95, 1)",
+    "--critical-plain-pressed": "rgba(255, 95, 95, 1)",
+    "--critical-plain-disabled": "rgb(255, 146, 146)",
+
+    "--hovered": "rgba(233, 239, 241, 1)",
+    "--pressed": "rgb(196, 196, 196)",
+
+    "--selected": "rgba(60, 130, 214, 1)",
+
+    "--checked": "rgba(60, 130, 214, 1)",
+    "--checked-alpha": "rgba(60, 130, 214, 0.1)",
+
+    "--border": "rgba(114, 114, 114, 1)",
+    "--border-error": "rgba(255, 121, 121, 1)",
+    "--border-weak": "rgba(213, 213, 213, 1)",
+
+    "--box-shadow-1": "rgba(0, 123, 255, 0.04) 0px 2px 20px 0px, rgba(15, 26, 38, 0.08) 0px 8px 32px 0px",
+    "--modal-background": "rgba(0, 0, 0, 0.75)",
+
+    "--skeleton-color-light": "rgba(241, 241, 241, 1)",
+    "--skeleton-color-dark": "rgba(233, 233, 233, 1)",
+
+    "--progress-bar-surface": "rgba(228, 229, 231, 1)",
+    "--progress-bar-filler": "rgba(68, 157, 167, 1)"
+}

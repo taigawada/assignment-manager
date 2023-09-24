@@ -1,0 +1,23 @@
+.simple_save_bar__base {
+    background: var(--surface-black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 200;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-8);
+}
+.simple_save_bar__header_text {
+    color: rgba(227, 277, 277, 1);
+    font-size: var(--font-size-8);
+    line-height: 70px;
+}
+.simple_save_bar__buttons_container {
+    display: flex;
+    align-items: center;
+}

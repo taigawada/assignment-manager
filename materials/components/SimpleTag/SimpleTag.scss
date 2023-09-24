@@ -1,0 +1,15 @@
+.simple_tag__base {
+    display: inline-flex;
+    align-items: center;
+    background: var(--tag-surface-color);
+    border-radius: 100vh;
+    box-shadow: var(--box-shadow-1);
+    padding: 1px 10px;
+    margin: 0 3px;
+}
+.simple_tag__text {
+    color: var(--tag-text-color);
+}
+.simple_tag__remove_icon {
+    margin-left: 10px;
+}
