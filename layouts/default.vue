@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
-
 import Header from "./default/header.vue";
 import Nav from "./default/nav.vue";
 
