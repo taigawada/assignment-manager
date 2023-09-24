@@ -24,7 +24,7 @@ export default defineNuxtPlugin(() => {
       ) {
         let user = nuxt.$user.value;
         if (!user) {
-          if (config.public.NODE_ENV === "production") {
+          if (config.public.VERCEL_ENV === "production") {
             throw new Error("Login Required.");
           } else {
             try {
@@ -54,7 +54,7 @@ export default defineNuxtPlugin(() => {
       ) {
         let user = nuxt.$user.value;
         if (!user) {
-          if (config.public.NODE_ENV === "production") {
+          if (config.public.VERCEL_ENV === "production") {
             throw new Error("Login Required.");
           } else {
             try {

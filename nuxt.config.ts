@@ -18,7 +18,7 @@ export default defineNuxtConfig({
   css: ["@fortawesome/fontawesome-svg-core/styles.css"],
   runtimeConfig: {
     public: {
-      NODE_ENV: process.env.NODE_ENV,
+      VERCEL_ENV: process.env.VERCEL_ENV,
       FIREBASE_PROJECT: process.env.FIREBASE_PROJECT,
       AUTH_SITE_BASE_URL: process.env.AUTH_SITE_BASE_URL,
     },
