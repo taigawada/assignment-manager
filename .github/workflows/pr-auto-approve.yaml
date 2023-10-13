@@ -12,9 +12,7 @@ jobs:
       github.event.pull_request.user.login == github.repository_owner
       && ! github.event.pull_request.draft
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
     steps:
       - uses: hmarr/auto-approve-action@v3
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{secrets.BOT_TOKEN}}
