@@ -9,11 +9,21 @@ const { data, pending } =
 <template>
   <div class="container" distribution="spaceAround">
     <div class="children">
-      <div class="image" @click="() => handleTransition('/teachers')"></div>
+      <img
+        class="image"
+        src="https://cdn.taigawada.work/teacher_thumbnail.png"
+        alt="teacher page"
+        @click="() => handleTransition('/teachers')"
+      />
       <span>Teacher</span>
     </div>
     <div class="children">
-      <div class="image" @click="() => handleTransition('/students')"></div>
+      <img
+        class="image"
+        src="https://cdn.taigawada.work/student_thumbnail.png"
+        alt="student page"
+        @click="() => handleTransition('/students')"
+      />
       <span>Student</span>
     </div>
   </div>
@@ -36,8 +46,6 @@ const { data, pending } =
 }
 .image {
   width: 100%;
-  height: 300px;
-  background: orange;
   cursor: pointer;
   margin-bottom: var(--space-4);
   transform: scale(1);
