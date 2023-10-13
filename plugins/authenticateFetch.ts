@@ -14,6 +14,7 @@ type FetchParams = Parameters<typeof $fetch>;
 type UseFetchParams = Parameters<typeof useFetch>;
 export default defineNuxtPlugin(() => {
   const nuxt = useNuxtApp();
+  const config = useRuntimeConfig();
   return {
     provide: {
       async authenticatedFetch(

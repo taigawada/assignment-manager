@@ -1,4 +1,8 @@
-import { signInWithCustomToken } from "firebase/auth";
+import {
+  GoogleAuthProvider,
+  signInWithPopup,
+  signInWithCustomToken,
+} from "firebase/auth";
 
 export default defineNuxtRouteMiddleware(async () => {
   const nuxt = useNuxtApp();
@@ -21,15 +25,24 @@ export default defineNuxtRouteMiddleware(async () => {
     } catch (e) {
       const params = new URLSearchParams();
       params.set("redirect", window.location.href);
-      if (config.public.NODE_ENV === "production") {
-        navigateTo(
-          `${
-            config.public.AUTH_SITE_BASE_URL
-          }/auth0/login?${params.toString()}`,
-          {
-            external: true,
-          },
-        );
+      switch (config.public.VERCEL_ENV) {
+        case "production":
+          navigateTo(
+            `${
+              config.public.AUTH_SITE_BASE_URL
+            }/auth/login?${params.toString()}`,
+            {
+              external: true,
+            },
+          );
+          break;
+        case "development": {
+          const provider = new GoogleAuthProvider();
+          await signInWithPopup(nuxt.$auth, provider);
+          break;
+        }
+        default:
+          break;
       }
     }
   }
