@@ -46,8 +46,6 @@ const { data, pending } =
 }
 .image {
   width: 100%;
-  height: 300px;
-  background: orange;
   cursor: pointer;
   margin-bottom: var(--space-4);
   transform: scale(1);
