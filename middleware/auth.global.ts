@@ -18,6 +18,9 @@ export default defineNuxtRouteMiddleware(async () => {
       );
       if (response.ok) {
         const result = await response.json();
+        if (result.status === "re-login") {
+          throw new Error("re-login required");
+        }
         if (nuxt.$auth && result.token) {
           await signInWithCustomToken(nuxt.$auth, result.token);
         }
