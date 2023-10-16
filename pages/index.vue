@@ -11,7 +11,7 @@ const { data, pending } =
     <div class="children">
       <img
         class="image"
-        src="https://cdn.taigawada.work/teacher_thumbnail.png"
+        src="https://cdn.taigawada.work/teacher_thumbnail.webp"
         alt="teacher page"
         @click="() => handleTransition('/teachers')"
       />
@@ -20,7 +20,7 @@ const { data, pending } =
     <div class="children">
       <img
         class="image"
-        src="https://cdn.taigawada.work/student_thumbnail.png"
+        src="https://cdn.taigawada.work/student_thumbnail.webp"
         alt="student page"
         @click="() => handleTransition('/students')"
       />
